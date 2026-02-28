@@ -1,9 +1,8 @@
 { pkgs ? import <nixpkgs> {} }:
 
-pkgs.mkShell {
+pkgs.mkShell { ## Shell for VsCode
   buildInputs = with pkgs; [
-    kdePackages.qtdeclarative
-    quickshell
+    biome
   ];
 
   shellHook = ''
