@@ -1,14 +1,56 @@
-// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
-$fg-color: #{"@theme_fg_color"};
-$bg-color: #{"@theme_bg_color"};
+$macchiato-base:     #1e2030;
+$macchiato-mantle:   #181926;
+$macchiato-surface0: #363a4f;
+$macchiato-surface1: #494d64;
+$macchiato-text:     #cad3f5;
+$macchiato-subtext:  #a5adcb;
+$macchiato-mauve:    #c6a0f6;
+$macchiato-pink:     #f5bde6;
+$macchiato-lavender: #b7bdf8;
 
 window#launcher {
   background: transparent;
-  color: $fg-color;
+  color: $macchiato-text;
 
   box#launcher-content {
-    background: $bg-color;
-    border-radius: 12px;
-    padding: 6px;
+    background: $macchiato-base;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid $macchiato-surface1;
+
+    label {
+      color: $macchiato-subtext;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    scale trough {
+      background: $macchiato-surface0;
+      border-radius: 8px;
+      min-width: 6px;
+    }
+
+    scale trough highlight {
+      background: linear-gradient(to bottom, $macchiato-mauve, $macchiato-lavender);
+      border-radius: 8px;
+    }
+
+    scale slider {
+      background: $macchiato-text;
+      border-radius: 50%;
+      min-width: 16px;
+      min-height: 16px;
+      margin: -5px;
+      box-shadow: 0 2px 6px rgba(24, 25, 38, 0.8);
+    }
+
+    scale:hover slider {
+      background: $macchiato-mauve;
+    }
+
+    scale trough:focus highlight {
+      background: linear-gradient(to bottom, $macchiato-pink, $macchiato-mauve);
+    }
   }
 }
