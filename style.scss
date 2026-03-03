@@ -2,55 +2,97 @@ $macchiato-base:     #1e2030;
 $macchiato-mantle:   #181926;
 $macchiato-surface0: #363a4f;
 $macchiato-surface1: #494d64;
+$macchiato-surface2: #5b6078;
 $macchiato-text:     #cad3f5;
 $macchiato-subtext:  #a5adcb;
 $macchiato-mauve:    #c6a0f6;
 $macchiato-pink:     #f5bde6;
 $macchiato-lavender: #b7bdf8;
+$macchiato-green:    #a6da95;
 
 window#launcher {
   background: transparent;
   color: $macchiato-text;
 
-  box#launcher-content {
-    background: $macchiato-base;
-    border-radius: 16px;
-    padding: 24px;
-    border: 1px solid $macchiato-surface1;
+  button#launcher-dismiss {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  button#launcher-close {
+    background: #ed8796;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-width: 24px;
+    min-height: 24px;
 
     label {
-      color: $macchiato-subtext;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
+      color: #1e2030;
+      font-size: 14px;
+      font-weight: 900;
     }
 
-    scale trough {
-      background: $macchiato-surface0;
-      border-radius: 8px;
-      min-width: 6px;
+    &:hover {
+      background: #f5bde6;
     }
+  }
 
-    scale trough highlight {
-      background: linear-gradient(to bottom, $macchiato-mauve, $macchiato-lavender);
-      border-radius: 8px;
-    }
+  box#launcher-content {
+    background: $macchiato-mantle;
+    border-radius: 20px;
+    padding: 20px 16px;
+    border: 1px solid $macchiato-surface0;
 
-    scale slider {
-      background: $macchiato-text;
-      border-radius: 50%;
-      min-width: 16px;
-      min-height: 16px;
-      margin: -5px;
-      box-shadow: 0 2px 6px rgba(24, 25, 38, 0.8);
-    }
+    box#slider-card {
+      background: $macchiato-base;
+      border-radius: 14px;
+      padding: 14px 10px;
+      border: 1px solid $macchiato-surface1;
+      min-width: 80px;
 
-    scale:hover slider {
-      background: $macchiato-mauve;
-    }
+      label#slider-icon {
+        font-size: 16px;
+        color: $macchiato-mauve;
+      }
 
-    scale trough:focus highlight {
-      background: linear-gradient(to bottom, $macchiato-pink, $macchiato-mauve);
+      label#slider-label {
+        font-size: 11px;
+        font-weight: 600;
+        color: $macchiato-subtext;
+        letter-spacing: 0.4px;
+      }
+
+      label#slider-percent {
+        font-size: 11px;
+        color: $macchiato-surface2;
+        font-variant-numeric: tabular-nums;
+      }
+
+      scale trough {
+        background: $macchiato-surface0;
+        border-radius: 10px;
+        min-width: 8px;
+      }
+
+      scale trough highlight {
+        background: linear-gradient(to bottom, $macchiato-mauve, $macchiato-lavender);
+        border-radius: 10px;
+      }
+
+      scale slider {
+        background: $macchiato-text;
+        border-radius: 4px;
+        min-width: 28px;
+        min-height: 10px;
+        margin: -4px;
+      }
+
+      scale:hover slider {
+        background: $macchiato-mauve;
+      }
     }
   }
 }
