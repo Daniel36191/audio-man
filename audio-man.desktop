@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Audio Man
+Comment=Audio management application
+Exec=audio-man
+Icon=audio-man
+Terminal=false
+Type=Application
+Categories=Audio;Music;AudioVideo;
+Keywords=audio;man;
+StartupNotify=true
